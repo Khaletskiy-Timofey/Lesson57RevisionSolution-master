@@ -12,14 +12,5 @@
 
 bool is_digits_count_odd(long long number)
 {
-	if (number / 10 == 0)
-	{
-		return true;
-	}
-	else if (number / 100 == 0)
-	{
-		return false;
-	}
-
-	return is_digits_count_odd(number / 100);
+	return number / 10 == 0 ? true : number / 100 == 0 ? false : is_digits_count_odd(number / 100);
 }

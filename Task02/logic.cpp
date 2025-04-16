@@ -13,20 +13,5 @@
 
 bool is_power_of_four(int number)
 {
-	if (number < 1)
-	{
-		return false;
-	}
-	if (number == 1)
-	{
-		return true;
-	}
-	if (number > 4 && number < 8)
-	{
-		return false;
-	}
-
-	bool is_power_of_four_number = is_power_of_four(number / 4);
-
-	return is_power_of_four_number;
+	return number < 1 ? false : number == 1 ? true : number > 4 && number < 8 ? false : is_power_of_four(number / 4);
 }
